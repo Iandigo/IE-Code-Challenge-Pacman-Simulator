@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Pacman Simulator</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+
+  <body>
+    <main role="main" class="container" id="app">
+      <header role="header">
+        <h1>Pacman Simulator</h1>
+      </header>
+      <div class="description">
+        <p><b>DESCRIPTION:</b></p>
+        <p>
+          The application is a simulation of Pacman moving on in a grid, of
+          dimensions 5 units x 5 units. There are no other obstructions on the
+          grid. Pacman is free to roam around the surface of the grid, but must
+          be prevented from moving off the grid. Any movement that would result
+          in Pacman moving off the grid must be prevented, however further valid
+          movement commands must still be allowed.
+        </p>
+        <p><b>COMMANDS:</b></p>
+        <p>
+          PLACE X,Y,F: put the Pacman on the grid in positon X,Y and facing
+          NORTH,SOUTH, EAST or WEST. The origin (0,0) can be considered the
+          SOUTH WEST most corner.
+        </p>
+        <p>
+          MOVE: move Pacman one unit forward in the direction it is currently
+          facing.
+        </p>
+        <p>
+          LEFT: rotate Pacman 90 degrees in the left direction without changing
+          the position of Pacman.
+        </p>
+        <p>
+          RIGHT: rotate Pacman 90 degrees in the right direction without
+          changing the position of Pacman.
+        </p>
+        <p>REPORT: announce the X,Y and F of Pacman.</p>
+      </div>
+      <div>
+        <form
+          onsubmit="event.preventDefault(); pacman.takeCommands()"
+          class="control"
+        >
+          <label for="commands">Enter commands:</label>
+          <input
+            id="commands"
+            type="text"
+            placeholder="place 0,0,north move report"
+          />
+          <button type="submit">Submit</button>
+          <p id="executed-lines" />
+        </form>
+        <div class="output">
+          <strong>Report:</strong>
+          <p id="report"></p>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

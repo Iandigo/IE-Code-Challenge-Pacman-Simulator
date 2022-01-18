@@ -1,0 +1,85 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Global styles */
+body {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.44;
+  color: #333;
+}
+
+/* Core styles */
+main {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: block;
+  text-align: center;
+}
+
+header h1 {
+  margin: 2em 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.description {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.control {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.control label {
+  display: block;
+  font-weight: 700;
+}
+
+.control input {
+  display: block;
+  position: relative;
+  width: 80%;
+}
+
+button {
+  display: inline-block;
+  position: relative;
+  background-color: #3f91f4;
+  color: #ffffff;
+  padding: 0.2em 0.5em;
+  margin: 0.1em 0;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.2;
+  transition: all 0.2s linear;
+}
+button:hover,
+button:active,
+button:focus {
+  background-color: #367bd1;
+  transition: all 0.2s linear;
+}
